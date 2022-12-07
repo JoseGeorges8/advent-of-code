@@ -9,6 +9,7 @@ import 'dart:math';
 // each 'group' separated by a space
 // the sum of each group is the amount of calories carried by each Elf
 void main() async {
+  DateTime startTime = DateTime.now();
 
   print("Advent of Code Day 01!");
 
@@ -42,4 +43,8 @@ void main() async {
   }
   int totalCals = caloriesPerElf[length-1] + caloriesPerElf[length-2] + caloriesPerElf[length-3];
   print("Total calories of the top three elfs: $totalCals");
+
+  DateTime finishedTime = DateTime.now();
+  print("----------------------");
+  print("Duration of code: ${finishedTime.difference(startTime).inMilliseconds} ms");
 }

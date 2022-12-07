@@ -36,6 +36,7 @@ import 'dart:io';
 
 */
 void main(List<String> arguments) async {
+  DateTime startTime = DateTime.now();
 
   print("Advent of Code Day 02!");
 
@@ -79,6 +80,12 @@ void main(List<String> arguments) async {
     totalScorePartTwo += Referee.calculateRoundScore(round);
   }
   print("Your score is: $totalScorePartTwo");
+
+
+  DateTime finishedTime = DateTime.now();
+
+  print("----------------------");
+  print("Duration of code: ${finishedTime.difference(startTime).inMilliseconds} ms");
 }
 
 enum Play {
